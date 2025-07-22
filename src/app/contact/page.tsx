@@ -25,29 +25,32 @@ export default function Contact() {
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setResult("Sending...");
-    const formData = new FormData(event.target);
+  event.preventDefault();
+  setResult("Sending...");
 
-    formData.append("access_key", "f6ce326c-76ff-4820-8f84-23b8bcd6d71b");
+  const form = event.currentTarget; // ✅ safer and typed correctly
+  const formData = new FormData(form);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+  formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY);
 
-    const data = await response.json();
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData,
+  });
 
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      setSubmitted(true);
-      setRedirecting(true);
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
-    }
-  };
+  const data = await response.json();
+
+  if (data.success) {
+    setResult("Form Submitted Successfully");
+    setSubmitted(true);
+    setRedirecting(true);
+    form.reset(); // ✅ now safe, since `form` is correctly typed
+  } else {
+    console.log("Error", data);
+    setResult(data.message);
+  }
+};
+
 
   useEffect(() => {
     if (redirecting) {
