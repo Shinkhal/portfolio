@@ -1,61 +1,65 @@
+
 # 🚀 Shinkhal's Portfolio Website
 
-A modern, fully responsive personal portfolio built with **Next.js** and **Tailwind CSS**. It showcases projects, skills, achievements, and includes SEO optimization and dark/light theme toggle.
+A sleek, fully responsive personal portfolio built with **Next.js** and **Tailwind CSS**, showcasing projects, achievements, and technical expertise.  
+Includes SEO optimization, smooth animations, and a light/dark mode toggle for a modern browsing experience.
+
+---
 
 ## 🌐 Live Preview
 
-🔗 [Visit Portfolio Website](https://nextjs-portfolio-shinkhal-sinhas-projects.vercel.app/)
+🔗 [Visit Portfolio Website](https://shinkhalsinha.vercel.app)
 
 ---
 
 ## 📸 Features
 
-- ⚡ **Built with Next.js** for performance and scalability
-- 🎨 **Tailwind CSS** for rapid UI development
-- 🌙 **Dark/Light mode** toggle using `next-themes`
-- 💼 **Dynamic Projects Section** from a single JS config
-- 🧠 **Achievements Section** with icons and color tags
-- 🧾 **Skills, Education & Contact** info included
-- 🪄 **Smooth animations** using `framer-motion`
-- ✅ SEO-friendly with optimized meta tags and structure
+- ⚡ **Next.js 14+** for performance, scalability, and SSR/SSG rendering
+- 🎨 **Tailwind CSS** for fast and responsive UI design
+- 🌙 **Dark/Light Mode** using `next-themes`
+- 💼 **Dynamic Projects Section** powered by a single configuration file
+- 🏆 **Achievements Timeline** with smooth animations and responsive layout
+- 🧾 **Detailed Sections:** Skills, Education, and Contact
+- 🪄 **Framer Motion** for seamless transitions and fade effects
+- 🔍 **SEO Optimized** with meta tags and accessible structure
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 14+
-- **Styling:** Tailwind CSS
-- **Icons:** Lucide-react, Tabler Icons
-- **Components:** shadcn/ui
-- **Animation:** Framer Motion
-- **Theme Management:** next-themes
-
-
+| Category | Technology |
+|-----------|-------------|
+| **Framework** | Next.js 14+ |
+| **Styling** | Tailwind CSS |
+| **Icons** | Lucide-react, Tabler Icons |
+| **Components** | shadcn/ui |
+| **Animations** | Framer Motion |
+| **Theme Management** | next-themes |
 
 ---
 
-## 🧠 Setup & Run Locally
+## ⚙️ Setup & Run Locally
 
-### 1. Clone the Repository
+### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/Shinkhal/Nextjs-Portfolio.git
-cd Nextjs-Portfolio
-```
+git clone https://github.com/Shinkhal/portfolio.git
+cd portfolio
+````
 
-### 2. Install Dependencies
+### 2️⃣ Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Run Development Server
+### 3️⃣ Start the Development Server
 
 ```bash
 npm run dev
 ```
 
-The site will be live at `http://localhost:3000`.
+The site will be live at 👉 [http://localhost:3000](http://localhost:3000)
 
 ---
 
@@ -65,11 +69,12 @@ The site will be live at `http://localhost:3000`.
 npm run build
 npm run start
 ```
+
 ---
 
 ## 📬 Contact
 
-Feel free to connect with me:
+Feel free to connect or collaborate:
 
 * 🌐 [Website](https://shinkhal-sinha.online)
 * 📧 [Email](mailto:shinkhalsinha@gmail.com)
@@ -86,8 +91,12 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🙌 Acknowledgements
 
-* [Next.js Docs](https://nextjs.org/docs)
-* [Tailwind CSS Docs](https://tailwindcss.com/docs)
+* [Next.js Documentation](https://nextjs.org/docs)
+* [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 * [shadcn/ui](https://ui.shadcn.com/)
 * [Framer Motion](https://www.framer.com/motion/)
 
+
+
+Would you like me to add a **“Deployment” section** next (showing Vercel setup steps + environment notes for images/fonts/SEO)? It looks great in portfolio repos.
+```
