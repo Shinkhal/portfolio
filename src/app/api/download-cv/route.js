@@ -3,7 +3,7 @@ import path from "path";
 import fs from "fs";
 
 export async function GET() {
-  const filePath = path.join(process.cwd(), "public", "shinkhal_resume_2025.pdf");
+  const filePath = path.join(process.cwd(), "public", "Shinkhal_Sinha_Full_Stack.pdf");
 
   if (!fs.existsSync(filePath)) {
     return NextResponse.json({ error: "CV file not found" }, { status: 404 });

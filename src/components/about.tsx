@@ -188,50 +188,88 @@ function About() {
 
         <Separator className="my-16 bg-neutral-700" />
 
+<FadeInSection>
+  <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+    {/* Section Header */}
+    <div ref={achievementRef} className="text-center mb-10 sm:mb-16">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+        Key Achievements
+      </h2>
+      <p className="text-neutral-400 max-w-3xl mx-auto mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed">
+        A showcase of milestones and recognitions that reflect my journey, growth, and contributions to the tech community.
+      </p>
+    </div>
 
-        <FadeInSection>
-          <section className="py-12 sm:py-20">
-            <div ref={achievementRef} className="text-center mb-10 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white">Key Achievements</h2>
-              <p className="text-neutral-400 max-w-3xl mx-auto mt-4 text-sm sm:text-base">
-                A collection of milestones and recognition that highlight my journey and contributions to the tech community.
+    {/* Timeline Container */}
+    <div className="relative max-w-4xl mx-auto">
+      {/* Center line (only visible on large screens) */}
+      <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-neutral-700" />
+
+      {achievements.map((a, i) => (
+        <div
+          key={a.id}
+          className={`relative flex flex-col sm:flex-row items-center mb-12 sm:mb-16 ${
+            i % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
+          }`}
+        >
+          {/* Mobile Timeline Node (visible only below sm) */}
+          <div className="flex sm:hidden flex-col items-center mb-4">
+            <div className="w-3.5 h-3.5 bg-orange-500 rounded-full border-4 border-neutral-950 shadow-md" />
+            <span className="bg-neutral-900 border border-neutral-700 text-white text-xs px-2 py-0.5 rounded mt-2 shadow-sm">
+              {a.year}
+            </span>
+          </div>
+
+          {/* Content Card */}
+          <div
+            className={`w-full sm:w-5/12 ${
+              i % 2 === 0 ? "text-right sm:pr-6" : "text-left sm:pl-6"
+            }`}
+          >
+            <div className="bg-neutral-900/80 border border-neutral-700 rounded-lg p-5 sm:p-6 hover:bg-neutral-800 transition-colors duration-300 shadow-md">
+              <h3 className="text-white font-semibold text-base sm:text-lg mb-2">
+                {a.title}
+              </h3>
+              <p className="text-neutral-300 text-xs sm:text-sm leading-relaxed">
+                {a.description}
               </p>
             </div>
-            <div className="relative max-w-4xl mx-auto px-2">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-neutral-700"></div>
-              {achievements.map((a, i) => (
-                <div
-                  key={a.id}
-                  className={`relative mb-12 flex flex-col sm:flex-row ${i % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"}`}
-                >
-                  <div className={`w-full sm:w-5/12 ${i % 2 === 0 ? "text-right pr-4" : "text-left pl-4"}`}>
-                    <div className="bg-neutral-850 border border-neutral-700 rounded-md p-4 hover:bg-neutral-800/80 transition-all text-sm">
-                      <h3 className="text-white font-semibold text-base mb-2">{a.title}</h3>
-                      <p className="text-neutral-300 text-xs">{a.description}</p>
-                    </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-                    <div className="w-3 h-3 bg-gray-400 rounded-full border-4 border-neutral-950 z-10"></div>
-                    <span className="bg-neutral-800 border border-neutral-700 text-white px-2 py-1 rounded text-xs mt-2">{a.year}</span>
-                  </div>
-                  <div className="w-full sm:w-5/12"></div>
-                </div>
-              ))}
-            </div>
-          </section>
-        </FadeInSection>
+          </div>
+
+          {/* Desktop Timeline Node (centered only on sm and above) */}
+          <div className="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 flex-col items-center z-10">
+            <div className="w-3.5 h-3.5 bg-orange-500 rounded-full border-4 border-neutral-950 shadow-md" />
+            <span className="bg-neutral-900 border border-neutral-700 text-white text-xs sm:text-sm px-2 py-0.5 rounded mt-2 shadow-sm">
+              {a.year}
+            </span>
+          </div>
+
+          {/* Alignment spacer for desktop */}
+          <div className="hidden sm:block w-5/12" />
+        </div>
+      ))}
+    </div>
+  </section>
+</FadeInSection>
+      
 
         <Separator className="my-20 bg-neutral-700" />
 
 <FadeInSection>
-  <section className="flex justify-center py-20 px-4">
-    <div className="border border-neutral-700 rounded-md mb-5 sm:p-12 w-full max-w-2xl text-center bg-neutral-900/80 backdrop-blur-sm shadow-md">
-      <h2 className="text-4xl sm:text-5xl md:text-6xl font-bebas font-bold uppercase text-orange-500 tracking-wide leading-tight mb-6">
-        Download <br /> My CV
+  <section className="flex justify-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8">
+    <div className="border border-neutral-700 rounded-lg sm:rounded-xl md:rounded-2xl 
+                    bg-neutral-900/80 backdrop-blur-sm shadow-lg 
+                    w-full max-w-2xl p-6 sm:p-10 md:p-12 text-center space-y-6">
+      
+      <h2 className="text-3xl sm:text-5xl md:text-6xl font-bebas font-bold uppercase 
+                     text-orange-500 tracking-wide leading-tight">
+        Download <br className="hidden sm:block" /> My CV
       </h2>
-      <p className="text-neutral-400 mb-8 text-sm sm:text-base">
-        Interested in working together? Download my CV to learn more about my skills and experience.
+
+      <p className="text-neutral-400 text-sm sm:text-base md:text-lg max-w-lg mx-auto">
+        Interested in working together? Download my CV to explore my skills, experience, and projects.
       </p>
+
       <button
         onClick={() => {
           const link = document.createElement("a");
@@ -241,13 +279,17 @@ function About() {
           link.click();
           document.body.removeChild(link);
         }}
-        className="inline-block border border-white/30 text-white text-sm px-6 py-3 rounded-md hover:bg-orange-500 hover:text-black transition-colors duration-300 hover:scale-105"
+        className="inline-block border border-white/30 text-white text-sm sm:text-base 
+                   px-6 sm:px-8 py-3 sm:py-4 rounded-md font-medium 
+                   hover:bg-orange-500 hover:text-black 
+                   transition-all duration-300 hover:scale-105 active:scale-100"
       >
         Download CV
       </button>
     </div>
   </section>
 </FadeInSection>
+
 
 
 
