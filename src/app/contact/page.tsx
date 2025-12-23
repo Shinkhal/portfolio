@@ -28,7 +28,7 @@ export default function Contact() {
   event.preventDefault();
   setResult("Sending...");
 
-  const form = event.currentTarget; // ✅ safer and typed correctly
+  const form = event.currentTarget; 
   const formData = new FormData(form);
 
   formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY);

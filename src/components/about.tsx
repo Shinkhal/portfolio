@@ -20,6 +20,7 @@ import Coding from "./Coding";
 import FadeInSection from "./FadeInSection";
 import { useParallax } from "@/hooks/useParallax";
 import { Separator } from "./ui/separator";
+import Snowfall from 'react-snowfall'
 
 const roles = [
   "Web Developer",
@@ -47,6 +48,7 @@ function About() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-neutral-200">
+    <Snowfall/>
       <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeInSection>
   <section className="py-32 px-4 sm:px-8">

@@ -21,6 +21,13 @@ export const socialMediaUrl = {
 // Enter your Work Experience here
 export const workDetails = [
   {
+    Position: "Software Development Engineer (Trainee)",
+    Company: "Vibeinn Techverse Pvt Ltd",
+    Location: "Delhi, India",
+    Type: "Full-time",
+    Duration: "December 2025 - Present",
+  },
+  {
     Position: "React Developer Intern",
     Company: "Celebal Technologies",
     Location: "Remote",
@@ -35,7 +42,6 @@ export const workDetails = [
     Duration: "August 2024 - September 2024"
   },
   {
-    logo: '/assets/labdox.png',
     Position: "Graphic Designer",
     Company: "Labdox",
     Location: "Remote",
